@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'Nexa Heavy';
+    src: url("../fonts/nexa/Nexa-Heavy.otf");
+}
+
+@font-face {
+    font-family: 'Nexa Bold';
+    src: url("../fonts/nexa/Nexa-Bold.otf");
+}
+
+@font-face {
+    font-family: 'Nexa Black';
+    src: url("../fonts/nexa/Nexa-Black.otf");
+}
+
+@font-face {
+    font-family: 'Nexa Regular';
+    src: url("../fonts/nexa/Nexa\ Regular.otf");
+}
+
+@font-face {
+    font-family: 'Barlow Bold';
+    src: url("../fonts/barlow/Barlow-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'Barlow Black';
+    src: url("../fonts/barlow/Barlow-Black.ttf");
+}
+
+@font-face {
+    font-family: 'Barlow Regular';
+    src: url("../fonts/barlow/Barlow-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Barlow Light';
+    src: url("../fonts/barlow/Barlow-Light.ttf");
+}
+
+.__nexaHeavy {
+    font-family: "Nexa Heavy";
+}
+
+.__nexaBold {
+    font-family: "Nexa Bold";
+}
+
+.__nexaBlack {
+    font-family: "Nexa Black";
+}
+
+.__nexaRegular {
+    font-family: "Nexa Regular";
+}
+
+.__barlowBold {
+    font-family: "Barlow Bold";
+}
+
+.__barlowBlack {
+    font-family: "Barlow Black";
+}
+
+.__barlowRegular {
+    font-family: "Barlow Regular";
+}
+
+.__barlowLight {
+    font-family: "Barlow Light";
+}
