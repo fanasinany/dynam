@@ -216,10 +216,10 @@
                     <ul class="navbar-nav justify-content-center" style="font-size: 16px;width: 100%; padding-left: 30%;">
                         <li class="nav-item" style="width: 15%;"><a href="{{ route('home') }}" class="nav-link text-uppercase __nexaBold"><span class="{{ Request::route()->getName() == 'home' ? 'active' : '' }}">HOME</span></a></li>
                         <li class="nav-item" style="width: 15%;"><a href="{{ route('about') }}" class="nav-link text-uppercase __nexaBold"><span class="{{ Request::route()->getName() == 'about' ? 'active' : '' }}">ABOUT</span></a></li>
-                        <li class="nav-item" style="width: 15%;"><a href="{{ route('services') }}" class="nav-link text-uppercase __nexaBold"><span class="{{ Request::route()->getName() == 'services' ? 'active' : '' }}">SE</span>RVICES</a></li>
+                        <li class="nav-item" style="width: 15%;"><a href="{{ route('services') }}" class="nav-link text-uppercase __nexaBold" style="color: #000000"><span class="{{ Request::route()->getName() == 'services' ? 'active' : '' }}">SE</span>RVICES</a></li>
                         <li class="nav-item" style="width: 15%;"><a href="{{ route('studios') }}" class="nav-link text-uppercase __nexaBold"><span class="{{ Request::route()->getName() == 'studios' ? 'active' : '' }}">STUDIOS</span></a></li>
                         <li class="nav-item" style="width: 25%;"><a href="#" class="nav-link text-uppercase __nexaBold"><span class="{{ Request::route()->getName() == 'salon_virtuel' ? 'active' : '' }}">SALON VIRTUEL</span></a></li>
-                        <li class="nav-item" style="width: 15%;"><a href="#" style="text-align: right;" class="nav-link text-uppercase __nexaBold" class="{{ Request::route()->getName() == 'contact' ? 'active' : '' }}">CONTACT</a></li>
+                        <li class="nav-item" style="width: 15%;"><a href="{{ route('contact') }}" style="text-align: right;" class="nav-link text-uppercase __nexaBold" class="{{ Request::route()->getName() == 'contact' ? 'active' : '' }}">CONTACT</a></li>
                     </ul>
                 </div>
             </div>
@@ -411,27 +411,58 @@
                     <div class="__nexaBold" style="font-size: 20px">Social Media</div>
                     <div class="list-unstyled __barlowRegular" style="margin-bottom: 4%;margin-top: 4%;font-size: 14px;line-height: 24px;">
                         <li style="display: flex">
-                            <div style="width: 25px"><i class="fab fa-facebook"></i></div>Dynam</li>
+                            <div style="height: 25px;width: 25px;">
+                                <img src="images/footer/facebook.png" alt="" width="16" style="padding-top: 2px">
+                            </div>
+                            <div>
+                                Dynam
+                            </div>
+                        </li>
                         <li style="display: flex">
-                            <div style="width: 25px"><i class="fab fa-twitter"></i></div>Dynam</li>
+                            <div style="height: 25px;width: 25px;">
+                                <img src="images/footer/twitter.png" alt="" width="16" style="padding-top: 2px">
+                            </div>
+                            <div>
+                                Dynam
+                            </div>
                         <li style="display: flex">
-                            <div style="width: 25px"><i class="fab fa-linkedin-in"></i></div>Dynam</li>
+                            <div style="height: 25px;width: 25px;">
+                                <img src="images/footer/linkedin.png" alt="" width="16" style="padding-top: 2px">
+                            </div>
+                            <div>
+                                Dynam
+                            </div>
+                        </li>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="__nexaBold" style="font-size: 20px">Contact</div>
                     <div class="list-unstyled __barlowRegular" style="margin-bottom: 4%;margin-top: 4%;font-size: 14px;line-height: 24px;">
                         <li style="display: flex">
-                            <div style="width: 25px"><i class="far fa-envelope"></i></div>administration@dynam.eu</li>
-                        <li style="display: flex">
-                            <div style="width: 25px"><i class="fas fa-phone"></i></div>+33 (0) 5 44 87 1564</li>
-                        <li style="display: flex">
-                            <div style="width: 25px"><i class="fas fa-map-marker-alt"></i></div>
-                            <div> 56 rue du bois, Paris, France <br>Explorer Business Park,<br>Ankorondrano, Antananarivo,<br>Madagascar
+                            <div style="height: 25px;width: 25px;">
+                                <img src="images/footer/phone.png" alt="" width="16" style="padding-top: 2px">
                             </div>
+                            <div>administration@dynam.eu</div>
                         </li>
-
-
+                        <li style="display: flex">
+                            <div style="height: 25px;width: 25px;">
+                                <img src="images/footer/phone.png" alt="" width="16" style="padding-top: 2px">
+                            </div>
+                            <div>+33 (0) 5 44 87 1564</div>
+                        </li>
+                        <li style="display: flex">
+                            <div style="height: 25px;width: 25px;">
+                                <img src="images/footer/localisation.png" alt="" width="16" style="padding-top: 2px">
+                            </div>
+                            <div>56 rue du bois, Paris</div>
+                        </li>
+                        <li style="display: flex">
+                            <div style="height: 25px;width: 25px;">
+                                <img src="images/footer/localisation.png" alt="" width="16" style="padding-top: 2px;opacity: 0;">
+                            </div>
+                            <div style="line-height: 100%">Explorer Business Park,<br>Ankorondrano,<br>
+                                Antananarivo, Madagascar </div>
+                        </li>
                     </div>
                 </div>
             </div>

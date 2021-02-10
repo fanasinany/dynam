@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     -->
     <link rel="stylesheet" href="fonts/fontawesome/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
     <style>
         /*
         *
@@ -25,6 +27,10 @@
         .navbar {
             transition: all 0.4s;
             background-color: rgb(255, 255, 255, 0.1);
+        }
+
+        a.btn_rm:hover{
+            color: #ffffff;
         }
         
         .navbar .nav-link {
@@ -82,6 +88,7 @@
             color: #ffffff;
             border: 0;
             padding: 10px 28px;
+            text-decoration: none;
         }
 
         .ny{
@@ -153,27 +160,58 @@
                     <div class="__nexaBold" style="font-size: 20px">Social Media</div>
                     <div class="list-unstyled __barlowRegular" style="margin-bottom: 4%;margin-top: 4%;font-size: 14px;line-height: 24px;">
                         <li style="display: flex">
-                            <div style="width: 25px"><i class="fab fa-facebook"></i></div>Dynam</li>
+                            <div style="height: 25px;width: 25px;">
+                                <img src="images/footer/facebook.png" alt="" width="16" style="padding-top: 2px">
+                            </div>
+                            <div>
+                                Dynam
+                            </div>
+                        </li>
                         <li style="display: flex">
-                            <div style="width: 25px"><i class="fab fa-twitter"></i></div>Dynam</li>
+                            <div style="height: 25px;width: 25px;">
+                                <img src="images/footer/twitter.png" alt="" width="16" style="padding-top: 2px">
+                            </div>
+                            <div>
+                                Dynam
+                            </div>
                         <li style="display: flex">
-                            <div style="width: 25px"><i class="fab fa-linkedin-in"></i></div>Dynam</li>
+                            <div style="height: 25px;width: 25px;">
+                                <img src="images/footer/linkedin.png" alt="" width="16" style="padding-top: 2px">
+                            </div>
+                            <div>
+                                Dynam
+                            </div>
+                        </li>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="__nexaBold" style="font-size: 20px">Contact</div>
                     <div class="list-unstyled __barlowRegular" style="margin-bottom: 4%;margin-top: 4%;font-size: 14px;line-height: 24px;">
                         <li style="display: flex">
-                            <div style="width: 25px"><i class="far fa-envelope"></i></div>administration@dynam.eu</li>
-                        <li style="display: flex">
-                            <div style="width: 25px"><i class="fas fa-phone"></i></div>+33 (0) 5 44 87 1564</li>
-                        <li style="display: flex">
-                            <div style="width: 25px"><i class="fas fa-map-marker-alt"></i></div>
-                            <div> 56 rue du bois, Paris, France <br>Explorer Business Park,<br>Ankorondrano, Antananarivo,<br>Madagascar
+                            <div style="height: 25px;width: 25px;">
+                                <img src="images/footer/phone.png" alt="" width="16" style="padding-top: 2px">
                             </div>
+                            <div>administration@dynam.eu</div>
                         </li>
-
-
+                        <li style="display: flex">
+                            <div style="height: 25px;width: 25px;">
+                                <img src="images/footer/phone.png" alt="" width="16" style="padding-top: 2px">
+                            </div>
+                            <div>+33 (0) 5 44 87 1564</div>
+                        </li>
+                        <li style="display: flex">
+                            <div style="height: 25px;width: 25px;">
+                                <img src="images/footer/localisation.png" alt="" width="16" style="padding-top: 2px">
+                            </div>
+                            <div>56 rue du bois, Paris</div>
+                        </li>
+                        <li style="display: flex">
+                            <div style="height: 25px;width: 25px;">
+                                <img src="images/footer/localisation.png" alt="" width="16" style="padding-top: 2px;opacity: 0;">
+                            </div>
+                            <div style="line-height: 100%">Explorer Business Park,<br>Ankorondrano,<br>
+                                Antananarivo, Madagascar </div>
+                        </li>
                     </div>
                 </div>
             </div>
@@ -191,8 +229,7 @@
         </div>
     </footer>
     <script src="js/jquery.js"></script>
-    
-    <script>
+        <script>
     </script>
 </body>
 

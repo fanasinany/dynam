@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="container-fluid padx-8 bc" style="background-image: url(images/contact/bg.png);color:#ffffff;" >
-    <div class="__nexaBold" style="text-align:center; font-size:28px; padding-top:130px; padding-bottom:50px;">Our Studios</div>
+    <div class="__nexaBold" style="text-align:center; font-size:28px; padding-top:130px; padding-bottom:50px;">Contact us</div>
     <div class="row">
         <div class="col text-center">
             <div class="ny">

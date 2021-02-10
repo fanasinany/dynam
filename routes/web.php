@@ -22,3 +22,11 @@ Route::view('/services','services')->name('services');
 Route::view('/studios','studios')->name('studios');
 
 Route::view('/contact','contact')->name('contact');
+
+Route::view('/DynamStudio','studios.dynamstudio')->name('dynamstudio');
+
+Route::view('/DynamFactory','studios.dynamfactory')->name('dynamfactory');
+
+Route::view('/D-Tech','studios.dtech')->name('dtech');
+
+Route::view('/SalonVirtuel','studios.salonvirtuel')->name('salonvirtuel');

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container-fluid padx-8 bc" style="background-image: url(images/studios/bg.png);color:#ffffff;" >
-    <div class="__nexaBold" style="text-align:center; font-size:28px; padding-top:130px; padding-bottom:50px;">Our Studios</div>
+    <div class="__nexaBold" style="text-align:center; font-size:28px; padding-top:130px; padding-bottom:85px;">Our Studios</div>
     <div class="row">
         <div class="col text-center">
             <div class="ny">
@@ -13,7 +13,7 @@
                     The world of 3D : Real Estate,<br>Industry & Entertainment
                 </div>
                 <div>
-                    <button class="btn_rm">Read more</button>
+                    <a href="{{ route('dynamstudio') }}" target="_blank" class="btn_rm">Read more</a>
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@
                     plans 2D et 3D, modélisation
                 </div>
                 <div>
-                    <button class="btn_rm">Read more</button>
+                    <a href="{{ route('dynamfactory') }}" target="_blank" class="btn_rm">Read more</a>
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@
                     Spécialiste design et animation<br>3D pour l'industrie PropTech
                 </div>
                 <div>
-                    <button class="btn_rm">Read more</button>
+                    <a href="{{ route('dtech') }}" target="_blank" class="btn_rm">Read more</a>
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@
                     Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit
                 </div>
                 <div>
-                    <button class="btn_rm">Read more</button>
+                    <a href="{{ route('salonvirtuel') }}" target="_blank" class="btn_rm">Read more</a>
                 </div>
             </div>
         </div>
