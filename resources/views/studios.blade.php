@@ -1,10 +1,10 @@
 @extends('layout')
 
 @section('content')
-<div class="container-fluid padx-8 bc" style="background-image: url(images/studios/bg.png);color:#ffffff;" >
-    <div class="__nexaBold" style="text-align:center; font-size:28px; padding-top:130px; padding-bottom:85px;">Our Studios</div>
+<div class="container-fluid padx-8 bc" style="background-image: url(images/studios/bg.jpg);color:#ffffff;" >
+    <div class="studiotitle">Our Studios</div>
     <div class="row">
-        <div class="col text-center">
+        <div class="col-xl-3 col-lg-6 text-center animate__animated animate__fadeInDown">
             <div class="ny">
                 <div style="height: 100px">
                     <img src="images/studios/dynamstudio.png" alt="" width="100">
@@ -17,7 +17,7 @@
                 </div>
             </div>
         </div>
-        <div class="col text-center">
+        <div class="col-xl-3 col-lg-6 text-center animate__animated animate__fadeInUp">
             <div class="ny">
                 <div style="height: 100px">
                     <img src="images/studios/dynamfactory.png" alt="" width="200">
@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-        <div class="col text-center">
+        <div class="col-xl-3 col-lg-6 text-center animate__animated animate__fadeInUp">
             <div class="ny">
                 <div style="height: 100px">
                     <img src="images/studios/dtech.png" alt="" width="240">
@@ -44,7 +44,7 @@
                 </div>
             </div>
         </div>
-        <div class="col text-center">
+        <div class="col-xl-3 col-lg-6 text-center animate__animated animate__fadeInDown">
             <div class="ny">
                 <div style="height: 100px">
                     <img src="images/studios/dynamfactory.png" alt="" width="200">

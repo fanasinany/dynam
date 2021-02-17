@@ -1,3 +1,12 @@
+@php
+    
+    function takeCategory($path) {
+        $cat = explode("/", $path);
+        return $cat[1];
+    }
+    
+@endphp
+
 @extends('layoutstudios')
 
 @section('title')
@@ -17,87 +26,148 @@ images/studios/dynamfactory/dynamfactorywhite.png
 @endsection
 
 @section('content')
-<div class="container-fluid padx-8 bc" id="sectionAbout" style="background-image: url(images/studios/dynamfactory/bg.png);color:#ffffff;" >
+<div class="container-fluid padx-8 bc" id="sectionAbout" style="background-image: url(images/studios/dynamfactory/bg.jpg);color:#ffffff;" >
     <div style="padding-top: 35%; padding-bottom:5%;">
-        <div class="__nexaBlack" style="text-transform: uppercase;font-size: 80px;color: #ffffff;line-height: 100%;">
+        <div class="big-texte">
             all about<br>cad/bim
         </div>
-        <div class="__barlowLight" style="font-size: 16px;color: #ffffff;line-height: 100%;width: 350px;padding-top: 1.5%;">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis eius dicta error recusandae consectetur deserunt nam cum, quos esse blanditiis?
+        <div class="textedetails">
+            Dynam Factory is the best all of building professionals. Our objective is to accompany you for all your projects by providing you with quality work in respect of your customers' deadlines.
         </div>
     </div> 
 </div>
+
 <div class="container-fluid padx-8">
+    
     <div class="titleonstudio" id="sectionTeam">TEAM</div>
-    <div class="row">
-        <div class="col-lg-8">
-            <div class="swiper-container">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                  <!-- Slides -->
-                  <div class="swiper-slide" style="background-image: url(images/studios/dynamfactory/team/team1.jpg); background-size:cover;"></div>
-                  <div class="swiper-slide" style="background-image: url(images/studios/dynamfactory/team/team2.jpg); background-size:cover;"></div>
-                  <div class="swiper-slide" style="background-image: url(images/studios/dynamfactory/team/team3.jpg); background-size:cover;"></div>
-                  
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="base">
+                    <div class="sary-team" id="bg-1">
+                    </div>
+                    <div class="soratra-team">
+                        <div class="global">
+                            <div class="st-title">
+                                SCAN TO BIM
+                            </div>
+                            <div class="st-details">
+                                Our team of talented draftsmen will elaborate 2D plans for you. We specialize in modeling and master the entire BIM process for all your projects.
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-
             </div>
-        </div>
-        <div class="col-lg-1">
-
-        </div>
-        <div class="col-lg-3">
-            <div class="swiper-container">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                  <!-- Slides -->
-                  <div class="swiper-slide">
-                    <div style="padding-top: 230px;">
-                        <div class="categorytitle">
-                            SCAN TO BIM
-                        </div>
-                        <div class="categorytexte">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur vero quod nulla saepe nam dignissimos ad. Rem in quam assumenda?
+            <div class="swiper-slide">
+                <div class="base">
+                    <div class="sary-team" id="bg-2">
+                    </div>
+                    <div class="soratra-team">
+                        <div class="global">
+                            <div class="st-title">
+                                CAD/BIM
+                            </div>
+                            <div class="st-details">
+                                Our team of talented draftsmen will elaborate 2D plans for you. We specialize in modeling and master the entire BIM process for all your projects.
+                            </div>
                         </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div style="padding-top: 230px;">
-                        <div class="categorytitle">
-                            CAD/BIM
-                        </div>
-                        <div class="categorytexte">
-                            Lorem 2, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur vero quod nulla saepe nam dignissimos ad. Rem in quam assumenda?
-                        </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div style="padding-top: 230px;">
-                        <div class="categorytitle">
-                            ARCHITECTURE
-                        </div>
-                        <div class="categorytexte">
-                            Lorem 3, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur vero quod nulla saepe nam dignissimos ad. Rem in quam assumenda?
-                        </div>
-                    </div>
-                  </div>
-                  
                 </div>
-
             </div>
-
+            <div class="swiper-slide">
+                <div class="base">
+                    <div class="sary-team" id="bg-3">
+                    </div>
+                    <div class="soratra-team">
+                        <div class="global">
+                            <div class="st-title">
+                                ARCHITECTURE
+                            </div>
+                            <div class="st-details">
+                                Our team of talented draftsmen will elaborate 2D plans for you. We specialize in modeling and master the entire BIM process for all your projects.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="titleonstudio" id="sectionPortfolio">PORTFOLIO & SERVICES</div>
-    <div class="portfolio">
-        <ul class="category">
-            <li class="active_category" style="width: 80px;">ALL</li>
-            <li style="width: 150px;">SCAN TO BIM</li>
-            <li style="width: 110px;">CAD/BIM</li>
-            <li style="width: 150px;">ARCHITECTURE</li>
-        </ul>
+        
+    @include('loader')
+    <div id="__portfolio" class="display-none">
+        <div class="titleonstudio" id="sectionPortfolio">PORTFOLIO & SERVICES</div>
+        <div class="layout">
+            <div class="row">
+                <div class="col-12">
+                    <!-- start filter navigation -->
+                    <ul class="category portfolio-filter nav nav-tabs border-none portfolio-filter-tab-1 text-uppercase margin-30px-bottom sm-margin-10px-bottom xs-margin-10px-bottom">
+                        <li class="nav active"><a id="__all" href="javascript:void(0);" data-filter="*" class="text-grayp">All</a></li>
+                        <li class="nav"><a id="__scantobim" href="javascript:void(0);" data-filter=".scantobim" class="text-grayp">Scan to bim</a></li>
+                        <li class="nav"><a id="__cadbim" href="javascript:void(0);" data-filter=".cadbim" class="text-grayp">Cad/bim</a></li>
+                        <li class="nav"><a id="__architecture" href="javascript:void(0);" data-filter=".architecture" class="text-grayp">Architecture</a></li>
+                    </ul>                                                                           
+                    <!-- end filter navigation -->
+                </div>
+            </div>
+        </div>
+        <div class="layout">
+            <!-- start filter content -->
+                <div class="row">
+                    <div class="col-md-12 no-padding xs-padding-15px-lr">
+                        <div class="filter-content overflow-hidden">
+                            <ul class="portfolio-grid portfolio-metro-grid work-4col hover-option5 gutter-medium lightbox-portfolio" style="position: relative;">
+                                <li class="grid-sizer" style="position: absolute; left: 0%; top: 0px;"></li>
+                                @foreach ($paths as $path)
+                                <li class="grid-item {{ takeCategory($path) }} zoomIn" style="position: absolute; left: 0%; top: 0px; visibility: visible; animation-name: zoomIn;">                           
+                                    <a class="gallery-link"  href="{{ asset('images/studios/'.$path) }}">
+                                        <figure>
+                                            <div class="portfolio-img">
+                                                <img src="{{ asset('images/studios/'.$path) }}" alt="" data-no-retina="">
+                                            </div>   
+                                        </figure>
+                                    </a>
+                                </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                </div> 
+            <!-- end filter content -->
+        </div>
     </div>
 </div>
+
+<script>
+    $(window).load(function () {
+    
+        $("#__loader").addClass('display-none');
+        $("#__portfolio").removeClass("display-none");
+        if(window.location.href == "{{ route('dynamfactory').'?category=scantobim' }}"){
+            $("#__scantobim").click()
+            $('html, body').animate({
+                scrollTop: $('#sectionPortfolio').offset().top
+            }, 'slow');
+            activeNav("portfolio");
+        }
+        else if(window.location.href == "{{ route('dynamfactory').'?category=cadbim' }}"){
+            $("#__cadbim").click()
+            $('html, body').animate({
+                scrollTop: $('#sectionPortfolio').offset().top
+            }, 'slow');
+            activeNav("portfolio");
+        }
+        else if(window.location.href == "{{ route('dynamfactory').'?category=architecture' }}"){
+            $("#__architecture").click()
+            $('html, body').animate({
+                scrollTop: $('#sectionPortfolio').offset().top
+            }, 'slow');
+            activeNav("portfolio");
+        }
+        else {
+            $("#__all").click()
+        }
+    });
+</script>
+
+
 @endsection

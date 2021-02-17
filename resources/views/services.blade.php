@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/logo/favIconDynam.png" type="image/x-icon">
     <title>Dynam</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/fonts.css">
-    <!--
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-    -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
     <link rel="stylesheet" href="fonts/fontawesome/css/all.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
     <style>
         /*
         *
@@ -182,12 +182,14 @@
             width:33%;
             color:#ffffff;
             padding: 2px;
-            font-size:14px;"
+            font-size:14px;
         }
 
         .btn_readmore:hover,
         .btn_readmore:focus{
-            background-color: #0BD4D1
+            background-color: #0BD4D1;
+            color: #ffffff;
+            outline: none;
         }
 
         .readmore{
@@ -198,6 +200,32 @@
             padding-bottom: 30px;
             padding-right: 20px;
         }
+
+        .mini-contact{
+            width: 100%;
+            height: 90px;
+            border-radius: 0;
+            border: 0;
+            border-top: 1px solid #000000;
+            color: #707070;
+            font-family: 'Barlow Regular';
+        }
+
+        .arrowdown{
+            position: absolute;
+            background: transparent;
+            border: 0px;
+            color: #000000;
+            margin-top: -20px;
+            margin-left: 3.2%;
+        }
+
+        .arrowdown:focus{
+            background: transparent;
+            border: none;
+            color: #000000;
+            outline: none;
+        }
         
     </style>
 </head>
@@ -205,13 +233,14 @@
 <body>
     <!-- Navbar-->
     <header>
-        <nav class="navbar navbar-expand-lg py-3">
+        <nav class="navbar navbar-expand-lg fixed-top py-3">
             <div class="container-fluid padx-8">
                 <a class="navbar-brand" href="/">
                     <img src="images/logo/DynamDark.png" alt="LogoDynam" width="80" height="40">
                 </a>
-                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
-
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div id="navbarSupportedContent" class="collapse navbar-collapse">
                     <ul class="navbar-nav justify-content-center" style="font-size: 16px;width: 100%; padding-left: 30%;">
                         <li class="nav-item" style="width: 15%;"><a href="{{ route('home') }}" class="nav-link text-uppercase __nexaBold"><span class="{{ Request::route()->getName() == 'home' ? 'active' : '' }}">HOME</span></a></li>
@@ -219,7 +248,51 @@
                         <li class="nav-item" style="width: 15%;"><a href="{{ route('services') }}" class="nav-link text-uppercase __nexaBold" style="color: #000000"><span class="{{ Request::route()->getName() == 'services' ? 'active' : '' }}">SE</span>RVICES</a></li>
                         <li class="nav-item" style="width: 15%;"><a href="{{ route('studios') }}" class="nav-link text-uppercase __nexaBold"><span class="{{ Request::route()->getName() == 'studios' ? 'active' : '' }}">STUDIOS</span></a></li>
                         <li class="nav-item" style="width: 25%;"><a href="#" class="nav-link text-uppercase __nexaBold"><span class="{{ Request::route()->getName() == 'salon_virtuel' ? 'active' : '' }}">SALON VIRTUEL</span></a></li>
-                        <li class="nav-item" style="width: 15%;"><a href="{{ route('contact') }}" style="text-align: right;" class="nav-link text-uppercase __nexaBold" class="{{ Request::route()->getName() == 'contact' ? 'active' : '' }}">CONTACT</a></li>
+                        <li class="nav-item" style="width: 15%;"><a href="{{ route('contact') }}" style="text-align: right;" class="nav-link text-uppercase __nexaBold" class="{{ Request::route()->getName() == 'contact' ? 'active' : '' }}">CONTACT</a>
+                            <button class="dropdown-toggle arrowdown" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          
+                            </button>
+                            <div class="dropdown-menu mini-contact padx-8" aria-labelledby="dropdownMenuButton">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div style="display: flex">
+                                            <div>
+                                                <img src="images/contact/minibar/phone.png" alt="" width="16">
+                                            </div>
+                                            <div style="padding-left: 5px;">
+                                                administration@dynam.eu
+                                            </div>
+                                        </div>
+                                        <div style="display: flex">
+                                            <div>
+                                                <img src="images/contact/minibar/phone.png" alt="" width="16">
+                                            </div>
+                                            <div style="padding-left: 5px;">
+                                                +33 (0) 5 44 87 1564
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col px-0" style="margin-left:28px;">
+                                        <div style="display: flex">
+                                            <div>
+                                                <img src="images/contact/minibar/localisation.png" alt="" width="16">
+                                            </div>
+                                            <div style="padding-left: 5px;">
+                                                56 rue du bois, Paris, France
+                                            </div>
+                                        </div>
+                                        <div style="display: flex">
+                                            <div>
+                                                <img src="images/contact/minibar/localisation.png" style="opacity: 0;" alt="" width="16">
+                                            </div>
+                                            <div style="padding-left: 5px;line-height:100%">
+                                                Explorer Business Park,<br>Ankorondrano, Antananarivo,<br>Madagascar 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -227,7 +300,7 @@
     </header>
 
     <div class="container-fluid padx-8">
-        <div class="__nexaBold" style="text-align:center; font-size:28px; padding-top:3%; padding-bottom:3%;">Discover our services</div>
+        <div class="__nexaBold" style="text-align:center; font-size:24px; padding-top:130px; padding-bottom:3%; color: #12131D">Discover our services</div>
         <div class="row" style="padding-bottom: 4%">
             <div class="col-lg-4" style="padding-left: 5px;padding-right:5px;">
                     <div class="col bg1">
@@ -235,7 +308,7 @@
                             Real Estate
                         </div>
                         <div class="readmore">
-                            <button class="__barlowRegular btn_readmore">Read more</button>
+                            <a href="{{ route('dynamstudio').'?category=realestate' }}" target="_black" class="btn __barlowRegular btn_readmore">Read more</a>
                         </div>
                     </div>
                     <div style="height: 10px">
@@ -246,7 +319,7 @@
                             Animation
                         </div>
                         <div class="readmore">
-                            <button class="__barlowRegular btn_readmore">Read more</button>
+                            <a href="{{ route('dynamstudio').'?category=animation' }}" target="_black" class="btn __barlowRegular btn_readmore">Read more</a>
                         </div>
                     </div>
                     <div style="height: 10px">
@@ -257,7 +330,7 @@
                             Cinema
                         </div>
                         <div class="readmore">
-                            <button class="__barlowRegular btn_readmore">Read more</button>
+                            <a href="{{ route('dynamstudio').'?category=cinema' }}" target="_black" class="btn __barlowRegular btn_readmore">Read more</a>
                         </div> 
                     </div>
                     <div style="height: 10px">
@@ -268,7 +341,7 @@
                             Architecture
                         </div> 
                         <div class="readmore">
-                            <button class="__barlowRegular btn_readmore">Read more</button>
+                            <a href="{{ route('dynamfactory').'?category=architecture' }}" target="_black" class="btn __barlowRegular btn_readmore">Read more</a>
                         </div>    
                     </div>
                     <div style="height: 10px">
@@ -279,7 +352,7 @@
                             Dev
                         </div>
                         <div class="readmore">
-                            <button class="__barlowRegular btn_readmore">Read more</button>
+                            <a href="{{ route('dtech').'?category=dev' }}" target="_black" class="btn __barlowRegular btn_readmore">Read more</a>
                         </div>
                     </div>
             </div>
@@ -289,7 +362,7 @@
                         Industry
                     </div>
                     <div class="readmore">
-                        <button class="__barlowRegular btn_readmore">Read more</button>
+                        <a href="{{ route('dynamstudio').'?category=industry' }}" target="_black" class="btn __barlowRegular btn_readmore">Read more</a>
                     </div>  
                 </div>
                 <div style="height: 10px">
@@ -300,7 +373,7 @@
                         VFX
                     </div>
                     <div class="readmore">
-                        <button class="__barlowRegular btn_readmore">Read more</button>
+                        <a href="{{ route('dynamstudio').'?category=vfx' }}" target="_black" class="btn __barlowRegular btn_readmore">Read more</a>
                     </div> 
                 </div>
                 <div style="height: 10px">
@@ -311,7 +384,7 @@
                         SCAN to BIM
                     </div>
                     <div class="readmore">
-                        <button class="__barlowRegular btn_readmore">Read more</button>
+                        <a href="{{ route('dynamfactory').'?category=scantobim' }}" target="_black" class="btn __barlowRegular btn_readmore">Read more</a>
                     </div>
                 </div>
                 <div style="height: 10px">
@@ -322,7 +395,7 @@
                         VR
                     </div>
                     <div class="readmore">
-                        <button class="__barlowRegular btn_readmore">Read more</button>
+                        <a href="{{ route('dtech').'?category=vr' }}" target="_black" class="btn __barlowRegular btn_readmore">Read more</a>
                     </div>   
                 </div>
                 <div style="height: 10px">
@@ -333,7 +406,7 @@
                         Salon Virtuel
                     </div>
                     <div class="readmore">
-                        <button class="__barlowRegular btn_readmore">Read more</button>
+                        <a href="" class="btn __barlowRegular btn_readmore">Read more</a>
                     </div>
                 </div>
             </div>
@@ -343,7 +416,7 @@
                         Entertainment
                     </div>
                     <div class="readmore">
-                        <button class="__barlowRegular btn_readmore">Read more</button>
+                        <a href="{{ route('dynamstudio').'?category=entertainment' }}" target="_black" class="btn __barlowRegular btn_readmore">Read more</a>
                     </div>
                 </div>
                 <div style="height: 10px">
@@ -354,7 +427,7 @@
                         Gaming
                     </div>
                     <div class="readmore">
-                        <button class="__barlowRegular btn_readmore">Read more</button>
+                        <a href="{{ route('dynamstudio').'?category=gaming' }}" target="_black" class="btn __barlowRegular btn_readmore">Read more</a>
                     </div>
                 </div>
                 <div style="height: 10px">
@@ -365,7 +438,7 @@
                         CAD/BIM
                     </div>
                     <div class="readmore">
-                        <button class="__barlowRegular btn_readmore">Read more</button>
+                        <a href="{{ route('dynamfactory').'?category=cadbim' }}" target="_black" class="btn __barlowRegular btn_readmore">Read more</a>
                     </div>
                 </div>
                 <div style="height: 10px">
@@ -376,7 +449,7 @@
                         IA
                     </div>
                     <div class="readmore">
-                        <button class="__barlowRegular btn_readmore">Read more</button>
+                        <a href="{{ route('dtech').'?category=ia' }}" target="_black" class="btn __barlowRegular btn_readmore">Read more</a>
                     </div>
                 </div>
             </div>
@@ -479,7 +552,6 @@
             </div>
         </div>
     </footer>
-    <script src="js/jquery.js"></script>
     
     <script>
     </script>
