@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 
@@ -14,42 +15,142 @@ use Illuminate\Support\Facades\Storage;
 |
 */
 
-Route::view('/','home')->name('home');
+Route::get('/{locale?}',function($locale = null){
 
-Route::view('/about','about')->name('about');
+    if($locale !== null) {
+        if (! in_array($locale, ['en', 'fr'])) {
+            abort(404);
+        }
 
-Route::view('/services','services')->name('services');
+        App::setLocale($locale);
+    }
 
-Route::view('/studios','studios')->name('studios');
+    return view('home', [
+        'language' => App::getLocale()
+    ]);
 
-Route::view('/contact','contact')->name('contact');
+})->name('home');
 
-Route::get('/DynamStudio', function(){
+Route::get('/about/{locale?}',function($locale = null){
+    if($locale !== null) {
+        if (! in_array($locale, ['en', 'fr'])) {
+            abort(404);
+        }
+        App::setLocale($locale);
+    }
+    else{
+        App::setLocale('en');
+    }
 
-    $files = Storage::disk('images')->allFiles('dynamstudio');
+    return view('about', [
+        'language' => App::getLocale()
+    ]);
+})->name('about');
+
+Route::get('/services/{locale?}',function($locale = null){
+    if($locale !== null) {
+        if (! in_array($locale, ['en', 'fr'])) {
+            abort(404);
+        }
+        App::setLocale($locale);
+    }
+    else{
+        App::setLocale('en');
+    }
+
+    return view('services', [
+        'language' => App::getLocale()
+    ]);
+})->name('services');
+
+Route::get('/studios/{locale?}',function($locale = null){
+    if($locale !== null) {
+        if (! in_array($locale, ['en', 'fr'])) {
+            abort(404);
+        }
+        App::setLocale($locale);
+    }
+    else{
+        App::setLocale('en');
+    }
+
+    return view('studios', [
+        'language' => App::getLocale()
+    ]);
+})->name('studios');
+
+Route::get('/contact/{locale?}',function($locale = null){
+    if($locale !== null) {
+        if (! in_array($locale, ['en', 'fr'])) {
+            abort(404);
+        }
+        App::setLocale($locale);
+    }
+    else{
+        App::setLocale('en');
+    }
+
+    return view('contact', [
+        'language' => App::getLocale()
+    ]);
+})->name('contact');
+
+Route::get('/DynamStudio/{locale?}', function($locale = null){
+    if($locale !== null) {
+        if (! in_array($locale, ['en', 'fr'])) {
+            abort(404);
+        }
+        App::setLocale($locale);
+    }
+    else{
+        App::setLocale('en');
+    }
+
+    $files = Storage::disk('images')->allFiles('dynamstudio/rea');
 
     return view('studios.dynamstudio',[
-        'paths' => preg_grep ('/\.jpg|.png|.jpeg |.gif$/i', $files)
+        'paths' => preg_grep ('/\.jpg|.png|.jpeg |.gif$/i', $files),
+        'language' => App::getLocale()
     ]);
 
 })->name('dynamstudio');
 
-Route::get('/DynamFactory', function(){
+Route::get('/DynamFactory/{locale?}', function($locale = null){
+    if($locale !== null) {
+        if (! in_array($locale, ['en', 'fr'])) {
+            abort(404);
+        }
+        App::setLocale($locale);
+    }
+    else{
+        App::setLocale('en');
+    }
 
-    $files = Storage::disk('images')->allFiles('dynamfactory');
+    $files = Storage::disk('images')->allFiles('dynamfactory/rea');
 
     return view('studios.dynamfactory',[
-        'paths' => preg_grep ('/\.jpg|.png|.jpeg |.gif$/i', $files)
+        'paths' => preg_grep ('/\.jpg|.png|.jpeg |.gif$/i', $files),
+        'language' => App::getLocale()
     ]);
 
 })->name('dynamfactory');
 
-Route::get('/D-Tech', function(){
+Route::get('/D-Tech/{locale?}', function($locale = null){
+    if($locale !== null) {
+        if (! in_array($locale, ['en', 'fr'])) {
+            abort(404);
+        }
+        App::setLocale($locale);
+    }
+    else{
+        App::setLocale('en');
+    }
 
-    $files = Storage::disk('images')->allFiles('dtech');
+    $files = Storage::disk('images')->allFiles('dtech/rea');
 
     return view('studios.dtech',[
-        'paths' => preg_grep ('/\.jpg|.png|.jpeg |.gif$/i', $files)
+        'paths' => preg_grep ('/\.jpg|.png|.jpeg |.gif$/i', $files),
+        'language' => App::getLocale()
     ]);
 
 })->name('dtech');

@@ -57,10 +57,11 @@ return [
 
         'images' => [
             'driver' => 'local',
-            'root' => storage_path('app/images'),
+            'root' =>public_path('images/studios'),
             'url' => env('APP_URL').'/images',
             'visibility' => 'public',
         ],
+
 
         's3' => [
             'driver' => 's3',

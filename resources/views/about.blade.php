@@ -1,19 +1,52 @@
 @extends('layout')
 
 @section('content')
-<div class="container-fluid padx-8 bc" style="padding-bottom: 5%;background-image: url(images/about/bg.jpg);">
-    <div class="bigtexte animate__animated animate__fadeInDown">
-        ABOUT US
+
+<style>
+
+    .bgc0{
+        background-color: #ffffff;
+    }
+
+    .missiontitle{
+        font-family: 'Nexa Bold'; 
+        color:#12131D; 
+        font-size: 24px;
+    }
+
+    .textedetailsqq{
+        color: #707070; 
+        font-family: 'Barlow Light';
+        padding-top: 10px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .bgc0{
+            background-color: #000000;
+        }
+
+        .missiontitle{
+            color: #ffffff;
+        }
+
+        .textedetailsqq{
+            color: #ffffff;
+        }
+    }
+</style>
+
+<div class="container-fluid padx-8 bc" style="padding-bottom: 5%;background-image: url({{asset('images/about/bg.jpg')}});">
+    <div class="bigtexte wow fadeInDown" data-wow-duration="3s">
+        @lang('about.bigtexte')
     </div>
-    <div class="textedetails animate__animated animate__zoomIn">
-        Leader in 3D imaging, we bring solutions for the realization of your projects in animation, CAD/BIM, Real Estate. We also participate in the success of your creations that use new technologies such as virtual reality and artificial intelligence.
-We put our expertise at your disposal in order to reach all your objectives.
+    <div class="textedetails wow fadeInUp" data-wow-duration="3s">
+        @lang('about.texteone')
     </div>
 </div>
 
-<div class="container-fluid padx-8" style="background-color: #ffffff">
+<div class="container-fluid padx-8 bgc0">
     <div class="py-5">
-        <div class="au_section2">
+        <div class="au_section2 wow bounceInUp">
             <div class="firstabout">
                 <div class="divi">
                     <div class="image-one">
@@ -43,15 +76,18 @@ We put our expertise at your disposal in order to reach all your objectives.
             </div>
             <div class="secondabout">
                 <div class="au_textecorps">
-                    <div style="font-family: 'Nexa Bold'; color:#12131D; font-size: 24px;">
-                        About us
+                    <div class="missiontitle">
+                        Mission
                     </div>
-                    <div style="color: #707070; font-family: 'Barlow Light';padding-top: 10px;">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisnos exercitation ullamco laboris nisi ut aliquip exea comm consequat.   
+                    <div class="textedetailsqq">
+                        @lang('about.textetwo')
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script type="text/javascript">
+
+</script>
 @endsection

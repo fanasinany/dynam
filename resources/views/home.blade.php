@@ -1,15 +1,15 @@
 @extends('layout')
 
 @section('content')
-<div class="container-fluid padx-8 bc" style="padding-bottom: 5%;background-image: url(images/home/banner.jpg);" >
-    <div class="bigtexte animate__animated animate__fadeInDown">
-        Welcome to<br>the 3d universe
+<div class="container-fluid padx-8 bc" style="padding-bottom: 5%;background-image: url({{asset('images/home/banner.jpg')}});" >
+    <div class="bigtexte wow fadeInDown" data-wow-duration="3s">
+        @lang('home.gtone')<br>@lang('home.gttwo')
     </div>
-    <div class="textedetails animate__animated animate__fadeIn">
-        Dive into the world of 3D with DYNAM and discover a parallel universe with our specializations.
+    <div class="textedetails wow fadeIn">
+        @lang('home.petittexte')
     </div>
-    <div class="div_btnrm animate__animated animate__fadeInUp">
-        <button class="btn btn-lg __nexaBold" style="background-color: #4607B3;color: #ffffff;border-radius: 0px; padding-left: 3%;padding-right: 3%;">Read more</button>
+    <div class="div_btnrm wow fadeInUp" data-wow-duration="3s">
+        <a href="{{ route('about') }}" class="btn btn-lg __nexaBold" style="background-color: #4607B3;color: #ffffff;border-radius: 0px; padding-left: 3%;padding-right: 3%;">@lang('home.readmore')</a>
     </div>
 </div>
 @endsection
